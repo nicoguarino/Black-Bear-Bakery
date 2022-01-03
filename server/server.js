@@ -5,8 +5,7 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 
-// set up to use once we get index.db set up 
-// const db = require('./config/connection');
+const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
