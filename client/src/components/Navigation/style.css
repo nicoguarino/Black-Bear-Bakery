@@ -1,0 +1,21 @@
+header img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.nav-links a {
+   list-style: none;
+   font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}

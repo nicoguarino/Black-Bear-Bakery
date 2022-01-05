@@ -1,11 +1,14 @@
 import React from 'react';
 // import Auth from '../../utils/auth';
 // import { Link } from "react-router-dom";
-// import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 // import Container from 'react-bootstrap/Container';
 // import Nav from 'react-bootstrap/Nav';
 // import Navbar from 'react-bootstrap/Navbar';
 import { FiShoppingCart } from 'react-icons/fi';
+import './style.css';
 
 
 // function Navigate() {
@@ -63,21 +66,43 @@ function Navigation() {
         //     </Container>
         // </Navbar>
         // </header>
-    
-
 
         <header>
-                <h1>
-                    <a href="/"><img src="https://i.imgur.com/hhienK4.png" /></a>
-                </h1>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#store">Store</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-                <FiShoppingCart />
-
+        <Navbar bg="light" variant="light">
+            <Container>
+                <Navbar.Brand href="/"><img src="https://i.imgur.com/hhienK4.png" /></Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/store">Store</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/">Logout</Nav.Link>
+                    <Nav.Link href="/signup">Signup</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
         </header>
+
+        
+        // <header>
+        //     <Container>
+        //     <nav>
+        //         <h1>
+        //             <a href="/"><img src="https://i.imgur.com/hhienK4.png" className="header-img" /></a>
+        //         </h1>
+        //     <ul>
+        //         <li><a href="/">Home</a></li>
+        //         <li><a href="#store">Store</a></li>
+        //         <li><a href="#contact">Contact</a></li>
+        //         <li><a href="/login">Login</a></li>
+        //         <li><a href="/">Logout</a></li>
+        //         <li><a href="/signup">Signup</a></li>
+        //     </ul>
+        //         <FiShoppingCart />
+        //     </nav>
+        //     </Container>
+        // </header>
+        
     );
 }
 
