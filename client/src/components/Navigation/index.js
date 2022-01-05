@@ -2,8 +2,10 @@ import React from 'react';
 // import Auth from '../../utils/auth';
 // import { Link } from "react-router-dom";
 // import { Navbar, Container, Nav } from 'react-bootstrap';
-// import Container from 'react-bootstrap';
-// import Nav from 'react-bootstrap';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+import { FiShoppingCart } from 'react-icons/fi';
 
 
 // function Navigate() {
@@ -64,18 +66,17 @@ function Navigation() {
     
 
 
-            <header>
+        <header>
                 <h1>
                     <a href="/"><img src="https://i.imgur.com/hhienK4.png" /></a>
                 </h1>
             <ul>
-            <li>
-                Signup
-            </li>
-            <li>
-                Login
-            </li>
-        </ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+                <FiShoppingCart />
+
         </header>
     );
 }
