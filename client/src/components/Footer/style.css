@@ -1,0 +1,9 @@
+.contact {
+    text-align: center;
+}
+
+.contact-link {
+    color: rgb(41, 34, 34, 0.5);
+    margin-left: 40px;
+    font-size: 35px;
+}
