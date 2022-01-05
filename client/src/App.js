@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup'; 
 import { StoreProvider } from './utils/GlobalState';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
