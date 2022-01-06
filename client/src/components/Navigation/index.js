@@ -15,7 +15,7 @@ function Navigation() {
                 <Nav bg="light" variant="light" collapseOnSelect expand="md">
                 <Container>
                     <Nav.Item>
-                        <Nav.Link href="/" onClick={() => Auth.logout()} className="justify-content-end">
+                        <Nav.Link href="/" onClick={() => Auth.logout()}>
                             Logout
                         </Nav.Link>
                     </Nav.Item>
@@ -23,16 +23,16 @@ function Navigation() {
                 </Nav>
             )
         } else {
-            return (
-
+            return (     
                 <Nav bg="light" variant="light" collapseOnSelect expand="md">
-                    <Container>
+                    <Container fluid>  
                         <Nav.Item>
                             <Nav.Link href="/signup">Signup</Nav.Link>
                             <Nav.Link href="/login">Login</Nav.Link>
                         </Nav.Item>
                     </Container>
                 </Nav> 
+                
             );
         }
     }
@@ -48,9 +48,9 @@ function Navigation() {
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/store">Store</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
-                        {showNavigation()}
-                        <Nav.Link><FiShoppingCart /></Nav.Link>
                     </Nav>
+                    {showNavigation()}
+                    <span className="shopping-cart"><FiShoppingCart /></span>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
