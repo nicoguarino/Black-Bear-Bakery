@@ -8,7 +8,7 @@ export function pluralize(name, count) {
 }
 
 // for offline functionality
-export function idatabasePromise(storeName, method, object) {
+export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
 
     // open connection to the database 

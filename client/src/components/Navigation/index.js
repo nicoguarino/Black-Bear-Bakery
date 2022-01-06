@@ -1,6 +1,5 @@
 import React from 'react';
-// import Auth from '../../utils/auth';
-// import { Link } from "react-router-dom";
+import Auth from '../../utils/auth';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
@@ -8,64 +7,54 @@ import { FiShoppingCart } from 'react-icons/fi';
 import './style.css';
 
 
-// function Navigate() {
-
-//     function showNavigation() {
-//         if (Auth.loggedIn()) {
-//             return (
-//                 <a href="/" onClick={() => Auth.logout()}>
-//                     Logout
-//                 </a>
-//             )
-//         } else {
-//             return (
-//                 <ul>
-//                     <li>
-//                         <Link to="/signup">
-//                             Signup
-//                         </Link>
-//                     </li>
-//                     <li>
-//                         <Link to="/login">
-//                             Login
-//                         </Link>
-//                     </li>
-//                 </ul>
-//             );
-//         }
-//     }
-
-//     return (
-//         <header>
-//             <h1>
-//                 <Link to="/">
-//                     <img src="https://i.imgur.com/hhienK4.png" />
-//                 </Link>
-//             </h1>
-//             <nav>
-//                 {showNavigation()}
-//             </nav>
-//         </header>   
-//     );
-// }
-
 function Navigation() {
+
+    function showNavigation() {
+        if (Auth.loggedIn()) {
+            return (
+                <Nav bg="light" variant="light" collapseOnSelect expand="md">
+                <Container>
+                    <Nav.Item>
+                        <Nav.Link href="/" onClick={() => Auth.logout()} className="justify-content-end">
+                            Logout
+                        </Nav.Link>
+                    </Nav.Item>
+                </Container>
+                </Nav>
+            )
+        } else {
+            return (
+
+                <Nav bg="light" variant="light" collapseOnSelect expand="md">
+                    <Container>
+                        <Nav.Item>
+                            <Nav.Link href="/signup">Signup</Nav.Link>
+                            <Nav.Link href="/login">Login</Nav.Link>
+                        </Nav.Item>
+                    </Container>
+                </Nav> 
+            );
+        }
+    }
+
     return (
         <header>
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" variant="light" collapseOnSelect expand="md">
             <Container>
                 <Navbar.Brand href="/"><img src="https://i.imgur.com/hhienK4.png" /></Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/store">Store</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
-                    <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="/">Logout</Nav.Link>
-                    <Nav.Link href="/signup">Signup</Nav.Link>
-                </Nav>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/store">Store</Nav.Link>
+                        <Nav.Link href="/contact">Contact</Nav.Link>
+                        {showNavigation()}
+                        <Nav.Link><FiShoppingCart /></Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
-        </header>  
+        </header>   
     );
 }
 
