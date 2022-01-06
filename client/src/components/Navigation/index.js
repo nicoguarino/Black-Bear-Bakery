@@ -4,9 +4,6 @@ import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
 import { FiShoppingCart } from 'react-icons/fi';
 import './style.css';
 
@@ -54,19 +51,6 @@ import './style.css';
 
 function Navigation() {
     return (
-        // <header>
-        // <Navbar bg="light" variant="light">
-        //     <Container>
-        //     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        //     <Nav className="me-auto">
-        //     <Nav.Link href="#home">Home</Nav.Link>
-        //     <Nav.Link href="#features">Features</Nav.Link>
-        //     <Nav.Link href="#pricing">Pricing</Nav.Link>
-        //     </Nav>
-        //     </Container>
-        // </Navbar>
-        // </header>
-
         <header>
         <Navbar bg="light" variant="light">
             <Container>
@@ -81,28 +65,7 @@ function Navigation() {
                 </Nav>
             </Container>
         </Navbar>
-        </header>
-
-        
-        // <header>
-        //     <Container>
-        //     <nav>
-        //         <h1>
-        //             <a href="/"><img src="https://i.imgur.com/hhienK4.png" className="header-img" /></a>
-        //         </h1>
-        //     <ul>
-        //         <li><a href="/">Home</a></li>
-        //         <li><a href="#store">Store</a></li>
-        //         <li><a href="#contact">Contact</a></li>
-        //         <li><a href="/login">Login</a></li>
-        //         <li><a href="/">Logout</a></li>
-        //         <li><a href="/signup">Signup</a></li>
-        //     </ul>
-        //         <FiShoppingCart />
-        //     </nav>
-        //     </Container>
-        // </header>
-        
+        </header>  
     );
 }
 
