@@ -17,29 +17,29 @@ db.once('open', async () => {
 
     const products = await Product.insertMany([
         {
-            name: '',
+            name: 'Sprinkle Explosion',
             description:
-                '',
-            image: '',
+                'A white confetti cupcake with vanilla butter cream, chocolate drizzle, and sprinkles with a secret inside.',
+            image: 'sprinkle_explosion.jpg',
             category: categories[0]._id,
-            price: 2.99,
+            price: 46.00,
             quantity: 500
         },
         {
-            name: '',
-            description: '',
-            image: '',
+            name: 'Strawberry',
+            description: 'Yellow cupcake with strawberry butter cream and fresh strawberries.',
+            image: 'strawberry_cupcake.jpg',
             category: categories[0]._id,
-            price: 1.99,
+            price: 46.00,
             quantity: 500
         },
         {
-            name: ' ',
-            category: categories[1]._id,
+            name: 'Cinnamon Roll',
+            category: categories[0]._id,
             description:
-                '',
-            image: '',
-            price: 7.99,
+                'Cinnamon cupcake with cinnamon powdered vanilla butter cream along with a cinnamon roll.',
+            image: 'cinnamon_roll.jpg',
+            price: 46.00,
             quantity: 20
         },
 
