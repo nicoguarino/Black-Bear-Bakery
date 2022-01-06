@@ -42,12 +42,12 @@ function App() {
         <StoreProvider>
           <Navigation />
           <Switch>
-          <Route path="/" element={<Home />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/signup" element={<Signup />}></Route>
-            {/* <Route exact path="/orderHistory" element={OrderHistory} />
-            <Route exact path="/products/:id" element={Detail} /> */}
-            {/* <Route element={NoMatch} /> */}
+          <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/signup" component={Signup}/>
+            {/* <Route exact path="/orderHistory" component={OrderHistory} />
+            <Route exact path="/products/:id" component={Detail} /> */}
+            {/* <Route component={NoMatch} /> */}
           </Switch>
           <Footer/>
         </StoreProvider>
