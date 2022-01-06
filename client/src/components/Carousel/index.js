@@ -1,5 +1,6 @@
 import React, {useState} from "react"; 
 import Carousel from 'react-bootstrap/Carousel';
+import './style.css';
 
 function ControlledCarousel() {
     const [index, setIndex] = useState(0);
@@ -12,8 +13,8 @@ function ControlledCarousel() {
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png"
+            className="d-block w-100 carousel-img"
+            src="https://i.imgur.com/jCpZRqv.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -23,8 +24,8 @@ function ControlledCarousel() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://www.outbrain.com/techblog/wp-content/uploads/2017/05/road-sign-361513_960_720.jpg"
+            className="d-block w-100 carousel-img"
+            src="https://i.imgur.com/ZEf7wtk.jpg"
             alt="Second slide"
           />
   
@@ -35,8 +36,8 @@ function ControlledCarousel() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://hackernoon.com/hn-images/0*xMaFF2hSXpf_kIfG.jpg"
+            className="d-block w-100 carousel-img"
+            src="https://i.imgur.com/uDC1Rxw.jpg"
             alt="Third slide"
           />
   
