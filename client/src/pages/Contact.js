@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 import { Form, Container } from 'react-bootstrap';
-import "./style.css";
 
 
 function ContactForm() {
@@ -72,4 +71,4 @@ function ContactForm() {
 
 }
 
-export default ContactForm;
+export default Contact;
