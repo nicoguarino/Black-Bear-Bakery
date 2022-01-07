@@ -2,6 +2,7 @@ import React from "react";
 // import Signup from '../components/Carousel'; 
 import ControlledCarousel from '../components/Carousel';
 import { Container } from 'react-bootstrap';
+import Cart from '../components/Cart';
 
 // import ProductList from "../components/ProductList";
 // import CategoryMenu from "../components/CategoryMenu";
