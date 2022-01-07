@@ -12,7 +12,7 @@ export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
 
     // open connection to the database 
-    const request = window.indexeddatabase.open('black-bear-bakery', 1);
+    const request = window.indexedDB.open('black-bear-bakery', 1);
 
     // create variables to hold reference to the database, trans, and object store
     let database, trans, store;
