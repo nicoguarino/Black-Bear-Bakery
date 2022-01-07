@@ -1,10 +1,8 @@
 h2 {
     text-align: center;
     padding-bottom: 30px;
-}
-
-.col {
-    border: 1px solid black;
+    padding-top: 50px;
+    font-family: 'Satisfy';
 }
 
 .bio-container {
@@ -15,4 +13,26 @@ h2 {
 .bio-img {
     border-radius: 5px;
     align-items: center;
+    box-shadow: 8px 8px 10px #aaa;
+}
+
+.wrapper {
+	padding-bottom: 90px;
+}
+
+.divider {
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
+
+.div-transparent:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
