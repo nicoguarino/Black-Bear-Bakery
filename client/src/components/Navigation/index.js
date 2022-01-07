@@ -4,6 +4,7 @@ import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { FiShoppingCart } from 'react-icons/fi';
+import Cart from '../Cart';
 import './style.css';
 
 
@@ -32,7 +33,6 @@ function Navigation() {
                         </Nav.Item>
                     </Container>
                 </Nav> 
-                
             );
         }
     }
@@ -50,7 +50,8 @@ function Navigation() {
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav>
                     {showNavigation()}
-                    <span className="shopping-cart"><FiShoppingCart /></span>
+                    <Cart />
+                    {/* <span className="shopping-cart"><FiShoppingCart /></span> */}
                 </Navbar.Collapse>
             </Container>
         </Navbar>
