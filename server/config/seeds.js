@@ -36,7 +36,7 @@ db.once('open', async () => {
             name: 'Cinnamon Roll',
             category: categories[0]._id,
             description:
-                'Cinnamon cupcake with cinnamon powdered vanilla butter cream along with a cinnamon roll. Sold by the dozen.',
+                'Cinnamon cupcake with cinnamon powdered vanilla butter cream along with a cinnamon stick. Sold by the dozen.',
             image: 'cinnamon_roll.jpg',
             price: 46.00,
             quantity: 500

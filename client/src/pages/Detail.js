@@ -10,7 +10,7 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS 
 } from '../utils/actions';
-import Cart from '../components/Cart';
+import { Container } from 'react-bootstrap';
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -81,32 +81,44 @@ function Detail() {
   return (
     <>
       {currentProduct ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+        <Container className="border">
+          <Link className="back" to="/store">← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find(p => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-              </button>
-          </p>
-
+          
+         
           <img
+            className="product-img"
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
-        </div>
+          
+          <br />
+        
+          <p className="description">{currentProduct.description}</p>
+         
+            <p>
+              <p className="price"><strong>Price:</strong>${currentProduct.price}
+              {' '}
+                <br />
+              </p>
+              
+              
+              <br />
+              <button className="button" onClick={addToCart}>Add to Cart</button>
+              <button
+                className="button"
+                disabled={!cart.find(p => p._id === currentProduct._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+                </button>
+            </p>
+
+        </Container>
       ) : null}
-      <Cart />
     </>
+
   );
 }
 
