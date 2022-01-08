@@ -3,7 +3,6 @@ import Auth from '../../utils/auth';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
-import { FiShoppingCart } from 'react-icons/fi';
 import Cart from '../Cart';
 import './style.css';
 

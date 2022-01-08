@@ -1,0 +1,19 @@
+.cart-img {
+ border: 1px solid;
+}
+
+.remove-from-cart {
+    cursor: pointer;
+}
+
+.cart-list {
+    text-align: center;
+}
+
+.cart-qty {
+    text-align: center;
+}
+
+.item {
+    font-weight: 500;
+}
