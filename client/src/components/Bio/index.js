@@ -12,7 +12,7 @@ function Bio() {
         </div>
         <h2>Meet the baker</h2>
         <Row>
-            <Col className="col d-flex justify-content-center">
+            <Col sm={12} xs={12} md={6} className="col d-flex justify-content-center">
                 <Figure>
                     <Figure.Image 
                         width={420}
@@ -22,7 +22,7 @@ function Bio() {
                     />
                 </Figure>
             </Col>
-            <Col className="col">
+            <Col sm={12} xs={12} md={6} className="col">
                 <p>My name is Emily Black and I'm an avid horse lover, mother of two, and owner of Black Bear Bakery. I service Durango, CO and surrounding areas with delectable bakery items for all occasions. Birthday parties, weddings, baby showers, or just to satisfy your sweet tooth, I can create any delicious bakery item to match your needs.</p> 
                 <p>
                 When I'm not baking, you can find me riding my mustang Ella though the mountains of southwest colorado or spending time with my family - my wonderfully supportive husband, Colton, and two beautiful children, Kyler and Brinley.

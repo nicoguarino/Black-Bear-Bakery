@@ -16,6 +16,7 @@ import NoMatch from './pages/NoMatch';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Store from './pages/Store';
+import Detail from './pages/Detail';
 import { StoreProvider } from './utils/GlobalState';
 
 
@@ -52,8 +53,8 @@ function App() {
             <Route exact path="/success" component={Success} />
             <Route exact path="/store" component={Store} />
             <Route exact path="/contact" component={Contact} />
-            {/* <Route exact path="/orderHistory" component={OrderHistory} />
-            <Route exact path="/products/:id" component={Detail} /> */}
+            {/* <Route exact path="/orderHistory" component={OrderHistory} /> */}
+            <Route exact path="/products/:id" component={Detail} />
             <Route component={NoMatch} />
           </Switch>
           <Footer/>
