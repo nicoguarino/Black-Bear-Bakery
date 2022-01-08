@@ -13,25 +13,37 @@ import { useLazyQuery } from '@apollo/client';
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
-    const [state, dispatch] = useStoreContext();
+  const [state, dispatch] = useStoreContext();
 
-    const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-    
-    useEffect(() => {
-      if (data) {
-        stripePromise.then((res) => {
-          res.redirectToCheckout({ sessionId: data.checkout.session });
-        });
-      }
-    }, [data]);
-    
-    
+  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-function toggleCart() {
-  dispatch({ type: TOGGLE_CART });
-}
+  // use effect for cart
+  useEffect(() => {
+    async function getCart() {
+      const cart = await idbPromise('cart', 'get');
+      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+    };
 
-function calculateTotal() {
+    if (!state.cart.length) {
+      getCart();
+    }
+  }, [state.cart.length, dispatch]);
+
+
+  // use effect for checkout 
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
+
+  function toggleCart() {
+    dispatch({ type: TOGGLE_CART });
+  }
+
+  function calculateTotal() {
     let sum = 0;
     state.cart.forEach(item => {
       sum += item.price * item.purchaseQuantity;
@@ -41,21 +53,19 @@ function calculateTotal() {
 
   function submitCheckout() {
     const productIds = [];
-  
+
+    getCheckout({
+      variables: { products: productIds }
+    });
+
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);
       }
-      getCheckout({
-        variables: { products: productIds }
-      });
-      
     });
   }
-  
-  
 
-if (!state.cartOpen) {
+  if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span
@@ -68,31 +78,31 @@ if (!state.cartOpen) {
 
   return (
     <div className="cart">
-  <div className="close" onClick={toggleCart}>[close]</div>
-  <h2>Shopping Cart</h2>
-  {state.cart.length ? (
-    <div>
-      {state.cart.map(item => (
-        <CartItem key={item._id} item={item} />
-      ))}
-      <div className="flex-row space-between">
-        <strong>Total: ${calculateTotal()}</strong>
-        {
-          Auth.loggedIn() ?
-          <button onClick={submitCheckout}>
-          Checkout
-        </button>
-            :
-            <span>(log in to check out)</span>
-        }
-      </div>
+      <div className="close" onClick={toggleCart}>[close]</div>
+      <h2>Shopping Cart</h2>
+      {state.cart.length ? (
+        <div>
+          {state.cart.map(item => (
+            <CartItem key={item._id} item={item} />
+          ))}
+          <div className="flex-row space-between">
+            <strong>Total: ${calculateTotal()}</strong>
+            {
+              Auth.loggedIn() ?
+                <button onClick={submitCheckout}>
+                  Checkout
+                </button>
+                :
+                <span>(log in to check out)</span>
+            }
+          </div>
+        </div>
+      ) : (
+        <h3>
+          Your cart is empty, visit the shop to add some treats!
+        </h3>
+      )}
     </div>
-  ) : (
-    <h3>
-      Your cart is empty, visit the shop to add some treats!
-    </h3>
-  )}
-</div>
   );
 };
 
