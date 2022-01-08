@@ -48,7 +48,7 @@ function ControlledCarousel() {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+      </Carousel>      
     );
   }
   
