@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useMutation } from '@apollo/client';
-// import Jumbotron from '../components/Jumbotron';
 import { ADD_ORDER } from '../utils/mutations';
 import { idbPromise } from '../utils/helpers';
 
@@ -22,21 +21,19 @@ function Success() {
       }
 
       setTimeout(() => {
-        window.location.assign('/login');
-      }, 3000);
+        window.location.assign('/contact');
+      }, 6500);
     }
 
     saveOrder();
   }, [addOrder]);
 
   return (
-    <div>
-      {/* <Jumbotron> */}
+    <div style={{ height: 560, clear: "both", paddingTop: 120, textAlign: "center" }}>
         <h1>Success!</h1>
         <h2>Thank you for your purchase!</h2>
         <h2>You will now be redirected to the contact page to organize pickup or 
     delivery at your convenience!</h2>
-      {/* </Jumbotron> */}
     </div>
   );
 }
