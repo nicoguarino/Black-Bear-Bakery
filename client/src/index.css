@@ -53,6 +53,7 @@ code {
   cursor: pointer;
 }
 
+
 @media screen and (max-width: 525px) {
   .product-img {
     width: calc(100% - 80px);
@@ -60,3 +61,11 @@ code {
     height: 100%
   }
 } 
+
+.contact-container {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    font-family: 'Satisfy';
+}
+
+
