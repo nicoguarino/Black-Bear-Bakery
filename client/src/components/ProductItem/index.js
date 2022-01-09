@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
+import './style.css';
 
 function ProductItem(item) {
   const {
@@ -41,18 +42,20 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
+
+    <div class="product-item">
+      <Link className="product-link" to={`/products/${_id}`}>
         <img
+          className="image"
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p className="product-name">{name}</p>
       </Link>
-      <div>
+      <div className="product-price">
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <button className="button" onClick={addToCart}>Add to cart</button>
     </div>
   );
 }
