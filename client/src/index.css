@@ -53,4 +53,9 @@ code {
   cursor: pointer;
 }
 
+.contact-container {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    font-family: 'Satisfy';
+}
 
