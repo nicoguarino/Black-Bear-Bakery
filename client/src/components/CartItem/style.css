@@ -1,5 +1,6 @@
 .cart-img {
  border: 1px solid;
+ margin: auto;
 }
 
 .remove-from-cart {
@@ -16,4 +17,11 @@
 
 .item {
     font-weight: 500;
+}
+.cart-img-box {
+    width: 100%;
+}
+.item-details {
+    align-items: center;
+    width:100%
 }

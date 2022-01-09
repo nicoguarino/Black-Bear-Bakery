@@ -48,7 +48,7 @@ const onChange = (e) => {
           className="cart-img"
         />
       </div>
-      <div>
+      <div className="item-details">
         <div className="item">{item.name}, ${item.price}</div>
         <div>
           <span>Qty: </span>
