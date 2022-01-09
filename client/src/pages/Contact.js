@@ -54,8 +54,8 @@ function Contact() {
   }
 
   return (
-    <Container className='contact-container'>
-      <h1>Contact me</h1>
+    <Container  className='contact-container'>
+      <h1 style={{ textAlign: "center" }}>Contact me</h1>
       <Form onSubmit={handleSubmit, sendEmail} >
         <Form.Group className="" controlId="Name">
           <Form.Label>Name:</Form.Label>
