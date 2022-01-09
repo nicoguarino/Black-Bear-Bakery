@@ -5,6 +5,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
 import { Button } from 'react-bootstrap';
+import './style.css';
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -39,10 +40,11 @@ function CategoryMenu() {
   }, [categoryData, loading, dispatch]);
 
   return (
-    <div>
+    <div className="category">
       <h2>Choose a Category:</h2>
       {categories.map(item => (
         <button
+          className="button"
           key={item._id}
           onClick={() => {
             handleClick(item._id);

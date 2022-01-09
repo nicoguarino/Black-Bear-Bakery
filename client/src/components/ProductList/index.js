@@ -4,9 +4,9 @@ import { idbPromise } from '../../utils/helpers';
 
 import ProductItem from '../ProductItem';
 import { QUERY_PRODUCTS } from '../../utils/queries';
-// import spinner from '../../assets/spinner.gif';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
+import './style.css';
 
 function ProductList() {
     const [state, dispatch] = useStoreContext();
@@ -44,6 +44,7 @@ function ProductList() {
     return (
       <div className="my-2">
         <h2>Our Products:</h2>
+        <p className="price-per-dozen">Price is per dozen</p>
         {state.products.length ? (
           <div className="flex-row">
             {filterProducts().map((product) => (
@@ -60,8 +61,11 @@ function ProductList() {
         ) : (
           <h3>You haven't added any products yet!</h3>
         )}
-        {/* {loading ? <img src={spinner} alt="loading" /> : null} */}
+        <div>
+            <div class="divider div-transparent"></div>
+        </div>
       </div>
+      
     );
   }
 

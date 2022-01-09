@@ -89,7 +89,7 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
             {
               Auth.loggedIn() ?
-                <button onClick={submitCheckout}>
+                <button className="button" onClick={submitCheckout}>
                   Checkout
                 </button>
                 :
