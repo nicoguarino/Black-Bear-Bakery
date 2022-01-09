@@ -53,4 +53,10 @@ code {
   cursor: pointer;
 }
 
-
+@media screen and (max-width: 525px) {
+  .product-img {
+    width: calc(100% - 80px);
+    overflow: auto;
+    height: 100%
+  }
+} 

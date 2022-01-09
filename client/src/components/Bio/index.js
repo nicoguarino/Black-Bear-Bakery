@@ -27,7 +27,7 @@ function Bio() {
                 <p>
                 When I'm not baking, you can find me riding my mustang Ella though the mountains of southwest colorado or spending time with my family - my wonderfully supportive husband, Colton, and two beautiful children, Kyler and Brinley.
                 </p>
-                If you don't find exactly what you need in my online store, I do take custom orders of any kind, so call me at (970)-238-0372 or contact me <a href="/contact">here</a>. I look forward to hearing from you!
+                If you don't find exactly what you need in my <a href="/store">online store</a>, I do take custom orders of any kind, so call me at (970)-238-0372 or contact me <a href="/contact">here</a>. I look forward to hearing from you!
                 
                 </Col>
         </Row>

@@ -99,7 +99,7 @@ const Cart = () => {
         </div>
       ) : (
         <h3>
-          Your cart is empty, visit the shop to add some treats!
+          Your cart is empty, visit the store to add some treats!
         </h3>
       )}
     </div>
