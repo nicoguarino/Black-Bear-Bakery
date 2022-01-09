@@ -13,48 +13,53 @@ function Navigation() {
         if (Auth.loggedIn()) {
             return (
                 <Nav bg="light" variant="light" collapseOnSelect expand="md">
-                <Container>
-                    <Nav.Item>
-                        <Nav.Link href="/" onClick={() => Auth.logout()}>
-                            Logout
-                        </Nav.Link>
-                    </Nav.Item>
-                </Container>
+                    <Container>
+                        <Nav.Item>
+                            <Nav.Link href='/orderHistory' >
+                                Order History
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="/" onClick={() => Auth.logout()}>
+                                Logout
+                            </Nav.Link>
+                        </Nav.Item>
+                    </Container>
                 </Nav>
             )
         } else {
-            return (     
+            return (
                 <Nav bg="light" variant="light" collapseOnSelect expand="md">
-                    <Container fluid>  
+                    <Container fluid>
                         <Nav.Item>
                             <Nav.Link href="/signup">Signup</Nav.Link>
                             <Nav.Link href="/login">Login</Nav.Link>
                         </Nav.Item>
                     </Container>
-                </Nav> 
+                </Nav>
             );
         }
     }
 
     return (
         <header>
-        <Navbar bg="light" variant="light" collapseOnSelect expand="md">
-            <Container>
-                <Navbar.Brand href="/"><img src="https://i.imgur.com/hhienK4.png" /></Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/store">Store</Nav.Link>
-                        <Nav.Link href="/contact">Contact</Nav.Link>
-                    </Nav>
-                    {showNavigation()}
-                    <Cart />
-                    {/* <span className="shopping-cart"><FiShoppingCart /></span> */}
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-        </header>   
+            <Navbar bg="light" variant="light" collapseOnSelect expand="md">
+                <Container>
+                    <Navbar.Brand href="/"><img src="https://i.imgur.com/hhienK4.png" /></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/store">Store</Nav.Link>
+                            <Nav.Link href="/contact">Contact</Nav.Link>
+                        </Nav>
+                        {showNavigation()}
+                        <Cart />
+                        {/* <span className="shopping-cart"><FiShoppingCart /></span> */}
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </header>
     );
 }
 
