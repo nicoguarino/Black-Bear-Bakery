@@ -23,11 +23,11 @@ function OrderHistory() {
               Order History for {user.firstName} {user.lastName}
             </h2>
             {user.orders.map((order) => (
-              <div key={order._id} className="flex-row" style={{ paddingBottom:'20px' }} >
-                <h3 className='price-per-dozen'>
+              <div key={order._id} className="flex-row order" style={{ paddingBottom:'20px' }} >
+                <h3 className='price-per-dozen history-date'>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
-                <div className="flex-row">
+                <div className="flex-row history-details">
                   {order.products.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="product-item">
                       <Link to={`/products/${_id}`}>

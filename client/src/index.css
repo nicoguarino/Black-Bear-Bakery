@@ -66,14 +66,37 @@ code {
 } 
 
 
+.history-date {
+  width: 100%; 
+  margin-top: 2vh;
+}
+.order {
+  border: solid 1px;
+  border-radius: 20px; 
+  width: 100%;
+}
+.history-details {
+  margin: auto;
+}
+
+
 @media screen and (max-width: 525px) {
   .product-img {
     width: calc(100% - 80px);
     overflow: auto;
     height: 100%
   }
+  .history-details{
+    width: 100%;
+    overflow: auto;
+    height: 70%;
+    margin:auto;
 } 
+.image {
+  width: 40vh !important;
+}
 
+}
 .contact-container {
     padding-bottom: 30px;
     padding-top: 50px;
