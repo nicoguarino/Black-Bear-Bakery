@@ -18,8 +18,8 @@ function ControlledCarousel() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className="text-shadow">We do weddings!</h3>
-            <p className="text-shadow">Contact me for details on wedding packages and check out the store for cake options!</p>
+            <h3 className="text-shadow mobile-view">We do weddings!</h3>
+            <p className="text-shadow mobile-view">Contact me for details on wedding packages and check out the store for cake options!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -30,8 +30,8 @@ function ControlledCarousel() {
           />
   
           <Carousel.Caption>
-            <h3 className="text-shadow">Exquisite Cupcakes</h3>
-            <p className="text-shadow">Checkout our store for a great variety of cupcakes!</p>
+            <h3 className="text-shadow mobile-view">Exquisite Cupcakes</h3>
+            <p className="text-shadow mobile-view">Checkout our store for a great variety of cupcakes!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -42,8 +42,8 @@ function ControlledCarousel() {
           />
   
           <Carousel.Caption>
-            <h3 className="text-shadow">Soft and Delightful</h3>
-            <p className="text-shadow">
+            <h3 className="text-shadow mobile-view">Soft and Delightful</h3>
+            <p className="text-shadow mobile-view">
               Mouthwatering homemade cookies also available in the store!
             </p>
           </Carousel.Caption>

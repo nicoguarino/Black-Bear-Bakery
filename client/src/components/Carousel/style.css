@@ -11,10 +11,7 @@
 }
 
 @media screen and (max-width: 770px) {
-   h3 {
+    .mobile-view {
        display: none;
    } 
-   p {
-       display: none;
-   }
 }
