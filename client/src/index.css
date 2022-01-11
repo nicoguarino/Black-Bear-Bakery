@@ -61,24 +61,26 @@ code {
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
 }
+
 .Cform button {
   margin-top: 2vh
 } 
-
 
 .history-date {
   width: 100%; 
   margin-top: 2vh;
 }
+
 .order {
-  border: solid 1px;
+  border-bottom: solid 1px;
   border-radius: 20px; 
   width: 100%;
+  margin-bottom: 40px;
 }
+
 .history-details {
   margin: auto;
 }
-
 
 @media screen and (max-width: 525px) {
   .product-img {
@@ -101,4 +103,21 @@ code {
     padding-bottom: 30px;
     padding-top: 50px;
     font-family: 'Satisfy';
+}
+
+.divider {
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
+
+.div-transparent:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
