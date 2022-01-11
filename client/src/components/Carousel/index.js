@@ -14,37 +14,37 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src="https://i.imgur.com/jCpZRqv.jpg"
+            src="./images/carousel-img1.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3 className="text-shadow">We do weddings!</h3>
+            <p className="text-shadow">Contact me for details on wedding packages and check out the store for cake options!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src="https://i.imgur.com/ZEf7wtk.jpg"
+            src="./images/carousel-img2.jpg"
             alt="Second slide"
           />
   
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 className="text-shadow">Exquisite Cupcakes</h3>
+            <p className="text-shadow">Checkout our store for a great variety of cupcakes!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-img"
-            src="https://i.imgur.com/uDC1Rxw.jpg"
+            src="./images/carousel-img3.jpg"
             alt="Third slide"
           />
   
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            <h3 className="text-shadow">Soft and Delightful</h3>
+            <p className="text-shadow">
+              Mouthwatering homemade cookies also available in the store!
             </p>
           </Carousel.Caption>
         </Carousel.Item>
