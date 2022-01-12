@@ -1,4 +1,4 @@
-# Black-Break-Bakery
+# Black-Bear-Bakery
 
 ## Table of Contents
 
@@ -104,14 +104,14 @@ function App() {
 
 ## Authors and acknowledgement <a name = "acknowledgement"></a>
 
-Nico (Filipu) Guarino
-Jaron Kenyon
-Kristin Foreyt
+- Nico (Filipu) Guarino
+- Jaron Kenyon
+- Kristin Foreyt
 
 
 ## Contributing <a name = "contributing"></a>
 
-Black Bear Backery is looking for contributions, however check with the owner of the website for further details by reaching on their contact information provided on the deployed website. The creator is opening to creative ideas and tweeking of design, but it must be approved first.
+Black Bear Bakery is looking for contributions, however, check with the owner of the website for further details by reaching out with their contact information provided on the deployed website. The creator is opening to creative ideas and tweeking of design, but it must be approved first.
 
 ## License <a name = "license">
 
