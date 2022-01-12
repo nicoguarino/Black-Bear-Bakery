@@ -118,7 +118,7 @@ db.once('open', async () => {
             category: categories[2]._id,
             description:
                 '8" custom cake that includes cake, frosting, and sprinkles. All cakes are 3 layers. Additional cost for fillings/toppers. Price set for base price.',
-            image: '8_cake.jpeg',
+            image: '8_cake.jpg',
             price: 80.00,
             quantity: 500
         },
