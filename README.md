@@ -25,7 +25,7 @@ No installation needed
 
 ## Code Sample <a name = "code-sample"></a>
 
-![Sample Code](https://github.com/nicoguarino/budget-tracker/blob/main/images/sample_code.PNG?raw=true "Sample Code")
+![Sample Code](https://github.com/nicoguarino/Black-Bear-Bakery/blob/main/client/public/images/sample_code.PNG?raw=true "Sample Code")
 
 ### Sample Code
 ```JavaScript Sample
